@@ -1,0 +1,4 @@
+joints:
+  sting_gripper_joint:
+    type: PositionControlledJoint
+    default_rpm: 10.0

@@ -1,0 +1,17 @@
+<launch>
+    <rosparam file="$(find sting_gripper_action)/config/actuators.yaml" command="load" ns="dynamixel_x_controller_example/"/>
+    <rosparam file="$(find sting_gripper_action)/config/joints.yaml" command="load" ns="dynamixel_x_controller_example/"/>
+    <rosparam file="$(find sting_gripper_action)/config/transmissions.yaml" command="load" ns="dynamixel_x_controller_example/"/>
+    <rosparam file="$(find sting_gripper_action)/config/controllers.yaml" command="load"/>
+
+    <node name="dynamixel_x_controller_example" pkg="dynamixel_x_controller" type="dynamixel_x_controller_example" output="screen"/>
+
+    <node
+        name="controller_spawner"
+        pkg="controller_manager"
+        type="spawner"
+        respawn="false"
+        output="screen"
+        args="joint_state_controller
+        sting_gripper_controller" />
+</launch>
