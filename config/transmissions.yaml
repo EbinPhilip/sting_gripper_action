@@ -1,0 +1,11 @@
+transmissions:
+  transmission_3:
+    joints:
+      - sting_gripper_joint
+    actuators:
+      - dynx_1
+    type: Sting::Gripper_Transmission_Loader
+    package: sting_gripper_transmission
+    reduction: 76.4248517942
+
+
