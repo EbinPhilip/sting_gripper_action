@@ -1,0 +1,4 @@
+action_name: "sting_gripper_action"
+gripper_joint_name: "sting_gripper_joint"
+joint_state_topic: "joint_states"
+gripper_command_topic: "sting_gripper_controller/command"
